@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <h1 class="mt-4">Hai</h1>
                 </div>
             </div>
         </div>
