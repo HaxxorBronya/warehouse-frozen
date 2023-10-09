@@ -47,7 +47,7 @@
             <div class="sidebar-menu">
                 <ul>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-chart-pie"></i>
                             Dashboard
                         </a>
@@ -56,19 +56,19 @@
                 <b class="menu-head px-2">Inventory</b>
                 <ul>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-user-friends"></i>
                             Supplier
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="/barangs" class="">
                             <i class="las la-box"></i>
                             Barang
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-tags"></i>
                             Kategori
                         </a>
@@ -77,13 +77,13 @@
                 <b class="menu-head px-2">Transaction</b>
                 <ul>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-user-friends"></i>
                             Barang Masuk
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-box"></i>
                             Barang Keluar
                         </a>
@@ -92,19 +92,19 @@
                 <b class="menu-head px-2">Report</b>
                 <ul>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-user-friends"></i>
                             Report Barang
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-box"></i>
                             Report Supplier
                         </a>
                     </li>
                     <li>
-                        <a href="" class="">
+                        <a href="/home" class="">
                             <i class="las la-box"></i>
                             Report Transaction
                         </a>
