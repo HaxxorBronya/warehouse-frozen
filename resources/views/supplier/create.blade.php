@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left mb-2">
-            <h2>Tambah Barang</h2>
+            <h2>Tambah Supplier</h2>
         </div>
     </div>
 </div>
@@ -20,15 +20,15 @@
     
 <div class="card">
     <div class="card-body">
-        <form action="{{ route('barangs.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('suppliers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
            
              <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Nama Barang</strong>
-                        <input type="text" name="nama_barang" class="form-control" placeholder="Nama Barang">
-                       @error('nama_barang')
+                        <strong>Nama Supplier</strong>
+                        <input type="text" name="nama_supplier" class="form-control" placeholder="Nama Supplier">
+                       @error('nama_supplier')
                           <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                        @enderror
                     </div>
@@ -36,19 +36,9 @@
          
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Kode Barang</strong>
-                         <input type="text" name="kode_barang" class="form-control" placeholder="Kode Barang">
-                        @error('kode_barang')
-                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                       @enderror
-                    </div>
-                </div>
-         
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Harga Barang</strong>
-                         <input type="number" name="harga_barang" class="form-control" placeholder="Harga Barang">
-                        @error('harga_barang')
+                        <strong>Nomor HP</strong>
+                         <input type="number" name="nomor_hp" class="form-control" placeholder="Nomor HP">
+                        @error('nomor_hp')
                           <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                        @enderror
                     </div>
@@ -56,15 +46,15 @@
 
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Jumlah Barang</strong>
-                         <input type="number" name="jumlah_barang" class="form-control" placeholder="Jumlah Barang">
-                        @error('harga_barang')
+                        <strong>Alamat</strong>
+                         <input type="text" name="alamat" class="form-control" placeholder="Alamat">
+                        @error('alamat')
                           <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                        @enderror
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <a class="btn btn-light" href="{{ route('barangs.index') }}"> Back</a>
+                    <a class="btn btn-light" href="{{ route('suppliers.index') }}"> Back</a>
                     <button type="submit" class="btn btn-primary ml-3">Submit</button>
                 </div>
             </div>

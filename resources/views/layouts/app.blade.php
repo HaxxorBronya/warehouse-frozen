@@ -56,7 +56,7 @@
                 <b class="menu-head px-2">Inventory</b>
                 <ul>
                     <li>
-                        <a href="/home" class="">
+                        <a href="/suppliers" class="">
                             <i class="las la-user-friends"></i>
                             Supplier
                         </a>
