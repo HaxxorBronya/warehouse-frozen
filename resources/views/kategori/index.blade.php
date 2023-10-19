@@ -1,18 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
- 
+
 <div class="mt-2">
     <div class="card shadow-sm">
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2>Inventory Page</h2>
+                        <h2>Category Page</h2>
                     </div>
                     <div class="pull-right mb-2">
-                        <a class="btn btn-dark" href="{{ route('barangs.create') }}">Tambah Barang</a>
-                        <a href="{{ url('exportlaporan') }}" class="btn btn-success">Export PDF</a>
+                        <a class="btn btn-dark" href="{{ route('kategoris.create') }}">Tambah Kategori</a>
                     </div>
                 </div>
             </div>
@@ -22,31 +21,25 @@
                     <p class="m-0 p-0">{{ $message }}</p>
                 </div>
             @endif
-
+            
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
                     <th>No</th>
-                    <th>Nama Barang</th>
-                    <th>Kode Barang</th>
-                    <th>Harga Barang</th>
-                    <th>Jumlah Barang</th>
+                    <th>Kategori</th>
                     <th width="280px">Action</th>
                 </thead>
                 <tbody>
                     @php
                     $no = 1;
                     @endphp
-                    @foreach ($barangs as $barang)
+                    @foreach ($kategoris as $kategori)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $barang->nama_barang }}</td>
-                        <td>{{ $barang->kode_barang }}</td>
-                        <td>{{ $barang->harga_barang }}</td>
-                        <td>{{ $barang->jumlah_barang }}</td>
+                        <td>{{ $kategori->kategori }}</td>
                         <td>
-                            <form action="{{ route('barangs.destroy',$barang->id) }}" method="Post">
+                            <form action="{{ route('kategoris.destroy',$kategori->id) }}" method="Post">
                  
-                                <a class="btn btn-sm btn-light" href="{{ route('barangs.edit',$barang->id) }}">Edit</a>
+                                <a class="btn btn-sm btn-light" href="{{ route('kategoris.edit',$kategori->id) }}">Edit</a>
                 
                                 @csrf
                                 @method('DELETE')
@@ -60,10 +53,10 @@
                 </tbody>
             </table>
            
-            {!! $barangs->links() !!}
+            {!! $kategoris->links() !!}
             
         </div>
     </div>
- 
- 
+
+
 @endsection

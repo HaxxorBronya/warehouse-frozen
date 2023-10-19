@@ -68,7 +68,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/home" class="">
+                        <a href="/kategoris" class="">
                             <i class="las la-tags"></i>
                             Kategori
                         </a>

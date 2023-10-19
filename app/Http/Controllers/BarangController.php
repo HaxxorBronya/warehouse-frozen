@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
     
 use App\Models\Barang;
 use Illuminate\Http\Request;
+use PDF;
    
 class BarangController extends Controller
 {
@@ -122,5 +123,13 @@ class BarangController extends Controller
      
         return redirect()->route('barangs.index')
                         ->with('success','inventory has been deleted successfully');
+    }
+
+    public function export(){
+        //mengambil data dan tampilan dari halaman laporan_pdf
+        //data di bawah ini bisa kalian ganti nantinya dengan data dari database
+        $data = PDF::loadview('barang/index', ['data' => 'ini adalah contoh laporan PDF']);
+        //mendownload laporan.pdf
+        return $data->download('laporan.pdf');
     }
 }
