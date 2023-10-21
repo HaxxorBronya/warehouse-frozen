@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\SuppController;
 use App\Http\Controllers\KateController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,11 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('barangs', BarangController::class);
     Route::resource('suppliers', SuppController::class);
     Route::resource('kategoris', KateController::class);
+    Route::get('/exportb', 'App\Http\Controllers\ReportController@index');    
 
-    Route::resource('exportlaporans', 'App\Http\Controllers\BarangController::export');
+    Route::get('/barangexp', 'App\Http\Controllers\ReportController@export');
+    Route::get('/barangexport', 'App\Http\Controllers\BarangController@export');
 
-    
     
     Route::get('/test', function () {
         return view('test');

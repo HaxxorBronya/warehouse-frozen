@@ -92,7 +92,7 @@
                 <b class="menu-head px-2">Report</b>
                 <ul>
                     <li>
-                        <a href="/home" class="">
+                        <a href="/exportb" class="">
                             <i class="las la-user-friends"></i>
                             Report Barang
                         </a>

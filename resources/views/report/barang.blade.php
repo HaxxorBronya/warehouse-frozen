@@ -11,8 +11,8 @@
                         <h2>Inventory Page</h2>
                     </div>
                     <div class="pull-right mb-2">
-                        <a class="btn btn-dark" href="{{ route('barangs.create') }}">Tambah Barang</a>
                         
+                        <a href="{{ url('barangexp') }}" class="btn btn-success">Export PDF</a>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                     <th>Kode Barang</th>
                     <th>Harga Barang</th>
                     <th>Jumlah Barang</th>
-                    <th width="280px">Action</th>
+                    
                 </thead>
                 <tbody>
                     @php
@@ -43,17 +43,7 @@
                         <td>{{ $barang->kode_barang }}</td>
                         <td>{{ $barang->harga_barang }}</td>
                         <td>{{ $barang->jumlah_barang }}</td>
-                        <td>
-                            <form action="{{ route('barangs.destroy',$barang->id) }}" method="Post">
-                 
-                                <a class="btn btn-sm btn-light" href="{{ route('barangs.edit',$barang->id) }}">Edit</a>
-                
-                                @csrf
-                                @method('DELETE')
-                   
-                                <button type="submit" class="btn btn-sm btn-light">Delete</button>
-                            </form>
-                        </td>
+                        
                     </tr>
                     @endforeach
                     

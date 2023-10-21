@@ -126,10 +126,11 @@ class BarangController extends Controller
     }
 
     public function export(){
+        $barang = Barang::orderBy('id','desc')->paginate(5);
         //mengambil data dan tampilan dari halaman laporan_pdf
         //data di bawah ini bisa kalian ganti nantinya dengan data dari database
-        $data = PDF::loadview('barang/index', ['data' => 'ini adalah contoh laporan PDF']);
+        $data = PDF::loadview('barang.export', ['barangs' => $barang]);
         //mendownload laporan.pdf
-        return $data->download('laporan.pdf');
+        return $data->stream('laporan.pdf');
     }
 }

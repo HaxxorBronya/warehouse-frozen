@@ -22,51 +22,35 @@
     <div class="card-body">
         <form action="{{ route('barangs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-           
-             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Nama Barang</strong>
-                        <input type="text" name="nama_barang" class="form-control" placeholder="Nama Barang">
-                       @error('nama_barang')
-                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                       @enderror
-                    </div>
-                </div>
-         
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Kode Barang</strong>
-                         <input type="text" name="kode_barang" class="form-control" placeholder="Kode Barang">
-                        @error('kode_barang')
-                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                       @enderror
-                    </div>
-                </div>
-         
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Harga Barang</strong>
-                         <input type="number" name="harga_barang" class="form-control" placeholder="Harga Barang">
-                        @error('harga_barang')
-                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                       @enderror
-                    </div>
-                </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Jumlah Barang</strong>
-                         <input type="number" name="jumlah_barang" class="form-control" placeholder="Jumlah Barang">
-                        @error('harga_barang')
-                          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                       @enderror
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <a class="btn btn-light" href="{{ route('barangs.index') }}"> Back</a>
-                    <button type="submit" class="btn btn-primary ml-3">Submit</button>
-                </div>
+            <label class="fw-semibold">Nama Barang</label>
+            <input type="text" name="nama_barang" class="form-control" >
+           @error('nama_barang')
+              <div class="text-danger">{{ $message }}</div>
+           @enderror
+        
+            <label class="fw-semibold mt-3">Kode Barang</label>
+             <input type="text" name="kode_barang" class="form-control" >
+            @error('kode_barang')
+              <div class="text-danger">{{ $message }}</div>
+           @enderror
+        
+            <label class="fw-semibold mt-3">Harga Barang</label>
+             <input type="number" name="harga_barang" class="form-control" >
+            @error('harga_barang')
+              <div class="text-danger">{{ $message }}</div>
+           @enderror
+
+        
+            <label class="fw-semibold mt-3">Jumlah Barang</label>
+             <input type="number" name="jumlah_barang" class="form-control" >
+            @error('harga_barang')
+              <div class="text-danger">{{ $message }}</div>
+           @enderror
+
+            <div class="mt-3">
+                <a class="btn" href="{{ route('barangs.index') }}"> Back</a>
+                <button type="submit" class="btn btn-primary ml-3">Submit</button>
             </div>
             
         </form>
