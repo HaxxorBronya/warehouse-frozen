@@ -98,7 +98,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/home" class="">
+                        <a href="/exportsupp" class="">
                             <i class="las la-box"></i>
                             Report Supplier
                         </a>
