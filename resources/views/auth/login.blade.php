@@ -63,8 +63,14 @@
             </div>
         </div>
     </div>
-    <div class="col-md-8 p-0 m-0 bg-indigo d-none d-md-block">
         
+    <div class="col-md-8 p-0 m-0 bg-secondary d-none d-md-block">
+    
+
+
+
     </div>
+
+
 </div>
 @endsection

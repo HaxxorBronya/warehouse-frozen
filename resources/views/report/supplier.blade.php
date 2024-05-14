@@ -3,7 +3,7 @@
 @section('content')
  
 <div class="mt-2">
-    <div class="card shadow-sm">
+    <div class="card shadow">
         <div class="card-body">
             <div class="row">
                 <div class="col-lg-12 margin-tb">
