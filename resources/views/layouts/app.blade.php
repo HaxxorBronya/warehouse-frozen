@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css" />
 
     <!-- Scripts -->
     @vite([
@@ -157,6 +158,8 @@
 
     <label for="sidebar-toggle" class="body-label"></label>
 
+
+    <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
 
 
 </body>

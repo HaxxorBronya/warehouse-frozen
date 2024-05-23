@@ -7,6 +7,8 @@ use App\Http\Controllers\SuppController;
 use App\Http\Controllers\KateController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SupexportController;
+use DataTables;
+use Yajra\DataTables\Services\DataTable;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,12 @@ use App\Http\Controllers\SupexportController;
 Route::get('/', function () {
     return view('auth.login');
 });
+
+// Route::get('supplier', function() {
+//     $model = App\Http\Controllers\SuppController::query();
+ 
+//     return DataTables::of($model)->toJson();
+// });
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
